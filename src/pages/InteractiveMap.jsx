@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Navigation, Info, Layers, Compass, ExternalLink, Shield, Home, Users, FileText } from 'lucide-react';
 import FloorplanModal from '../components/FloorplanModal';
 
+const BASE = import.meta.env.BASE_URL || '/';
+
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    CAMPUS DATA
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -12,42 +14,42 @@ const campusData = {
     title: 'Administrative Block',
     subtitle: 'Admissions & T&P Cell',
     description: 'Central hub for admissions, document verification, and the Training & Placement (T&P) Cell. The Auditorium is located right next to it.',
-    image: '/images/campus/admin.jpg',
+    image: `${BASE}images/campus/admin.jpg`,
   },
   D1: {
     id: 'D1',
     title: 'Seminar Hall D1',
     subtitle: 'Computer Engineering Dept.',
     description: 'Home to the Computer Engineering Department. Features classrooms, labs, faculty rooms, and the official Seminar Hall in room 108.',
-    image: '/images/campus/d1.jpg',
+    image: `${BASE}images/campus/d1.jpg`,
   },
   Cafeteria: {
     id: 'Cafeteria',
     title: 'Main Canteen',
     subtitle: 'Social & Dining Hub',
     description: 'Spacious social hub with proper cross-ventilation. Serves snacks, Indian, and Chinese cuisine.',
-    image: '/images/campus/cafeteria.jpg',
+    image: `${BASE}images/campus/cafeteria.jpg`,
   },
   Sports: {
     id: 'Sports',
     title: 'Sports Complex',
     subtitle: 'C.K. Pithawalla Stadium',
     description: 'C.K. Pithawalla Stadium. Includes a cricket ground, athletics track, football ground, and indoor sports facilities.',
-    image: '/images/campus/sports.jpg',
+    image: `${BASE}images/campus/sports.jpg`,
   },
   Library: {
     id: 'Library',
     title: 'Reading Room',
     subtitle: 'Quiet Study & Reading Area',
     description: 'Spacious, well-lit study area equipped with individual reading desks and quiet zones for focused learning.',
-    image: '/images/campus/library.jpg',
+    image: `${BASE}images/campus/library.jpg`,
   },
   Hostel: {
     id: 'Hostel',
     title: 'Campus Hostels (Boys & Girls)',
     subtitle: 'RESIDENTIAL HUB',
     description: 'Secure, twin-sharing on-campus accommodation featuring lush green surroundings, mess facilities, and 24/7 security. Helpdesk: 7990653634.',
-    image: '/images/campus/hostel.jpg',
+    image: `${BASE}images/campus/hostel.jpg`,
     wardens: [
       { type: "Boys (H2)", capacity: "80 Rooms / 160 Students", warden: "Prof. Mahesh N. Patel", email: "mahesh.patel@ckpcet.ac.in" },
       { type: "Girls (H1)", capacity: "52 Rooms / 104 Students", warden: "Prof. Honey S. Lalwani", email: "honey.lalwani@ckpcet.ac.in" }

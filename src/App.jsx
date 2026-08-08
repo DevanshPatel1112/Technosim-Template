@@ -94,8 +94,8 @@ const App = () => {
               <Route index element={<Navigate to="dashboard" replace />} />
               <Route path="dashboard" element={currentUser === 'vendor' ? <VendorDashboard /> : <Dashboard />} />
 
-              {/* Map & Events (Visitor/Student) */}
-              <Route path="map" element={['visitor', 'student'].includes(currentUser) ? <InteractiveMap /> : <NotFound />} />
+              {/* Map & Events */}
+              <Route path="map" element={<InteractiveMap />} />
               <Route path="events" element={['visitor', 'student'].includes(currentUser) ? <EventsHub /> : <NotFound />} />
 
               {/* Student Only */}
