@@ -4,7 +4,7 @@
 // ============================================================
 
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
@@ -71,7 +71,7 @@ const App = () => {
   const handleLogout = ()     => setCurrentUser(null);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AnimatePresence mode="wait">
         {currentUser === null ? (
           /* ── Global Login Gate — no Sidebar/Header rendered ── */
@@ -90,9 +90,10 @@ const App = () => {
                 />
               }
             >
-              {/* Common Routes */}
-              <Route index element={currentUser === 'vendor' ? <VendorDashboard /> : <Dashboard />} />
-              
+              {/* Default: always go to Dashboard */}
+              <Route index element={<Navigate to="dashboard" replace />} />
+              <Route path="dashboard" element={currentUser === 'vendor' ? <VendorDashboard /> : <Dashboard />} />
+
               {/* Map & Events (Visitor/Student) */}
               <Route path="map" element={['visitor', 'student'].includes(currentUser) ? <InteractiveMap /> : <NotFound />} />
               <Route path="events" element={['visitor', 'student'].includes(currentUser) ? <EventsHub /> : <NotFound />} />
@@ -118,7 +119,7 @@ const App = () => {
           </Routes>
         )}
       </AnimatePresence>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

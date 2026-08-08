@@ -16,24 +16,24 @@ import {
 /* ── Nav Config ─────────────────────────────────────────── */
 const NAV_CONFIG = {
   visitor: [
-    { label: 'Dashboard',        path: '/',                     icon: LayoutDashboard, end: true },
+    { label: 'Dashboard',        path: '/dashboard',            icon: LayoutDashboard },
     { label: 'Interactive Map',  path: '/map',                  icon: Map },
     { label: 'Public Events',    path: '/events',               icon: CalendarDays },
   ],
   student: [
-    { label: 'Dashboard',        path: '/',                     icon: LayoutDashboard, end: true },
+    { label: 'Dashboard',        path: '/dashboard',            icon: LayoutDashboard },
     { label: 'Interactive Map',  path: '/map',                  icon: Map },
     { label: 'Events Hub',       path: '/events',               icon: CalendarDays },
     { label: 'Campus Services',  path: '/services',             icon: ConciergeBell },
     { label: 'Propose Event',    path: '/propose-event',        icon: PlusCircle },
   ],
   vendor: [
-    { label: 'Vendor Dashboard', path: '/',                     icon: LayoutDashboard, end: true },
+    { label: 'Vendor Dashboard', path: '/dashboard',            icon: LayoutDashboard },
     { label: 'Manage Menu',      path: '/manage-menu',          icon: Utensils },
     { label: 'Live Orders',      path: '/live-orders',          icon: Bell },
   ],
   admin: [
-    { label: 'Admin Dashboard',  path: '/',                     icon: ShieldCheck, end: true },
+    { label: 'Admin Dashboard',  path: '/dashboard',            icon: ShieldCheck },
     { label: 'Approve Events',   path: '/approve-events',       icon: CalendarDays },
     { label: 'Broadcast Center', path: '/broadcast',            icon: Radio },
     { label: 'System Health',    path: '/system-health',        icon: Activity },
