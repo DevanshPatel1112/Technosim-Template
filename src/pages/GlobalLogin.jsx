@@ -5,6 +5,8 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ckpcetLogo from '../assets/logos/ckpcet-logo.png';
+import trustLogo from '../assets/logos/trust-logo.png';
 import { GraduationCap, Mail, Lock, Eye, EyeOff, AlertTriangle, ShieldCheck, User, Coffee, Map } from 'lucide-react';
 
 const DEMO_ACCOUNTS = [
@@ -104,20 +106,24 @@ const GlobalLogin = ({ onLogin }) => {
         >
           {/* ── Branding ── */}
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '36px' }}>
-            <motion.div
-              initial={{ scale: 0.5, opacity: 0, rotate: -20 }}
-              animate={{ scale: 1, opacity: 1, rotate: 0 }}
-              transition={{ delay: 0.2, type: 'spring', stiffness: 200, damping: 15 }}
-              style={{
-                width: '68px', height: '68px', borderRadius: '20px',
-                background: 'linear-gradient(135deg, #7048E8, #9B7AFF)',
-                boxShadow: '0 0 40px rgba(112,72,232,0.6), inset 0 1px 0 rgba(255,255,255,0.2)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                marginBottom: '18px',
-              }}
-            >
-              <GraduationCap size={32} color="#fff" />
-            </motion.div>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0, rotate: -15 }}
+                animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                transition={{ delay: 0.15, type: 'spring', stiffness: 200, damping: 15 }}
+                className="bg-white rounded-full p-1.5 flex items-center justify-center overflow-hidden shrink-0 h-16 w-16 shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+              >
+                <img src={trustLogo} alt="Navyug Vidyabhavan Trust Logo" className="w-full h-full object-contain" />
+              </motion.div>
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0, rotate: 15 }}
+                animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                transition={{ delay: 0.25, type: 'spring', stiffness: 200, damping: 15 }}
+                className="bg-white rounded-full p-1.5 flex items-center justify-center overflow-hidden shrink-0 h-16 w-16 shadow-[0_0_25px_rgba(112,72,232,0.4)]"
+              >
+                <img src={ckpcetLogo} alt="CKPCET Logo" className="w-full h-full object-contain" />
+              </motion.div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 8 }}

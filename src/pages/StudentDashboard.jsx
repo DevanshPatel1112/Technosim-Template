@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ckpcetLogo from '../assets/logos/ckpcet-logo.png';
 import {
   QrCode, Printer, Wallet, Coffee, BookOpen, Wifi,
   Users, CalendarCheck, CheckCircle, ChevronRight
@@ -55,8 +56,13 @@ const DigitalIDCard = () => {
             ID: CKP-2026-CSE-104
           </p>
         </div>
-        <div className="bg-white/10 p-2.5 rounded-[12px] border border-white/20 backdrop-blur-md shadow-[0_0_15px_rgba(112,72,232,0.5)]">
-          <QrCode size={32} className="text-ckp-pure-white" />
+        <div className="flex items-center gap-3">
+          <div className="bg-white rounded-full p-1 flex items-center justify-center overflow-hidden shrink-0 h-12 w-12 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+            <img src={ckpcetLogo} alt="CKPCET Logo" className="w-full h-full object-contain" />
+          </div>
+          <div className="bg-white/10 p-2.5 rounded-[12px] border border-white/20 backdrop-blur-md shadow-[0_0_15px_rgba(112,72,232,0.5)]">
+            <QrCode size={28} className="text-ckp-pure-white" />
+          </div>
         </div>
       </div>
 

@@ -6,6 +6,7 @@
 
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import ckpcetLogo from '../assets/logos/ckpcet-logo.png';
 import {
   Map, CalendarDays, ConciergeBell, ShieldCheck,
   Bell, Search, GraduationCap, ChevronRight,
@@ -69,15 +70,11 @@ const Sidebar = ({ currentUser, onLogout }) => {
           gap: '16px'
         }}>
         <motion.div
-          whileHover={{ rotate: 360, scale: 1.15 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
-          style={{
-            background: 'linear-gradient(135deg, #7048E8, #9B7AFF)',
-            boxShadow: '0 0 24px rgba(112,72,232,0.45), inset 0 1px 0 rgba(255,255,255,0.15)',
-          }}
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
+          className="bg-white rounded-full p-1 flex items-center justify-center overflow-hidden shrink-0 h-10 w-10 shadow-md"
         >
-          <GraduationCap size={17} className="text-ckp-pure-white" />
+          <img src={ckpcetLogo} alt="CKPCET Logo" className="w-full h-full object-contain" />
         </motion.div>
         <div>
           <p className="text-ckp-pure-white font-extrabold text-[15px] leading-none tracking-tight">
