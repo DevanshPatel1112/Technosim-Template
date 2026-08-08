@@ -74,7 +74,7 @@ const Sidebar = ({ currentUser, onLogout }) => {
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="bg-white rounded-full p-1 flex items-center justify-center overflow-hidden shrink-0 h-10 w-10 shadow-md"
         >
-          <img src="/images/ckpcet-logo.png" alt="CKPCET Logo" className="w-full h-full object-contain" />
+          <img src={ckpcetLogo} alt="CKPCET Logo" className="w-full h-full object-contain" />
         </motion.div>
         <div>
           <p className="text-ckp-pure-white font-extrabold text-[15px] leading-none tracking-tight">

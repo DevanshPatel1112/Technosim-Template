@@ -113,7 +113,7 @@ const GlobalLogin = ({ onLogin }) => {
                 transition={{ delay: 0.15, type: 'spring', stiffness: 200, damping: 15 }}
                 className="bg-white rounded-full p-1.5 flex items-center justify-center overflow-hidden shrink-0 h-16 w-16 shadow-[0_0_25px_rgba(255,255,255,0.2)]"
               >
-                <img src="/images/trust-logo.png" alt="Navyug Vidyabhavan Trust Logo" className="w-full h-full object-contain" />
+                <img src={trustLogo} alt="Navyug Vidyabhavan Trust Logo" className="w-full h-full object-contain" />
               </motion.div>
               <motion.div
                 initial={{ scale: 0.5, opacity: 0, rotate: 15 }}
@@ -121,7 +121,7 @@ const GlobalLogin = ({ onLogin }) => {
                 transition={{ delay: 0.25, type: 'spring', stiffness: 200, damping: 15 }}
                 className="bg-white rounded-full p-1.5 flex items-center justify-center overflow-hidden shrink-0 h-16 w-16 shadow-[0_0_25px_rgba(112,72,232,0.4)]"
               >
-                <img src="/images/ckpcet-logo.png" alt="CKPCET Logo" className="w-full h-full object-contain" />
+                <img src={ckpcetLogo} alt="CKPCET Logo" className="w-full h-full object-contain" />
               </motion.div>
             </div>
 
